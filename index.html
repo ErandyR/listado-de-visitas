@@ -17,11 +17,11 @@
       <input type="button" onclick="textoGrande();" value="Texto grande">
       <input type="button" onclick="textoMediano();" value="Texto mediano">
       <input type="button" onclick="textoChico();" value="Texto chico">
-      <input type="button" onclick="" value="Color de texto">
-      <input type="button" onclick="" value="Color de fondo">
-      <input type="button" onclick="" value="Alinear izquierda">
-      <input type="button" onclick="" value="Centrar">
-      <input type="button" onclick="" value="Alinear derecha">
+      <input type="button" onclick="colorDeTexto();" value="Color de texto">
+      <input type="button" onclick="colorDeFondo();" value="Color de fondo">
+      <input type="button" onclick="alinearIzquierda();" value="Alinear izquierda">
+      <input type="button" onclick="centrar();" value="Centrar">
+      <input type="button" onclick="alinearDerecha();" value="Alinear derecha">
     </div>
     <br>
     <div>
@@ -29,9 +29,11 @@
     </div>
     <hr>
     <h3>Contenido</h3>
-    <div id="textoPrevio">
-      <p id="previoTexto"></p>
-    </div>
+    <font class="preVista" id="colorTexto">
+      <div id="textoPrevio">
+        <p id="previoTexto"><span id="colorParrafo"></span></p>
+      </div>
+    </font>
     <div id= "botonEnviar">
       <input type= "button" onclick="" value="enviar" id="botonEnviar">
     </div>
