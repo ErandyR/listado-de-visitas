@@ -31,17 +31,18 @@ function alinearDerecha(){
 }
 function crearComentario(){
   var parrafoAgregar = document.getElementById("previoTexto").value;
-  if(parrafoAgregar.length > 0){
-    if(encontararParrafo(parrafoAgregar){
+  var nParrafo = document.createTextNode(parrafoAgregar);
+  if(nParrafo.length > 0){
+    if(encontrarParrafo(nParrafo)){
     var parrafo = document.createElement("p");
-    parrafo.innerHTML= parrafoAgregar;
+    parrafo.innerHTML= nParrafo;
     document.getElementById("nuevoParrafo").appendChild(parrafo);
     }
   }
   return false;
 }
-function encontararParrafo(contenido){
-  var comentario = document.getElementById("nuevoParrafo").getElementsByTagName("p");
+function encontrarParrafo(contenido){
+  var comentario = document.getElementById("nuevoParrafo");
   for (var i = 0; i < comentario.length; i++){
     if(comentario[i].innerHTML == contenido)
     return false;
