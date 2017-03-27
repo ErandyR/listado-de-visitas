@@ -29,3 +29,22 @@ function centrar(){
 function alinearDerecha(){
   document.getElementById("previoTexto").align="right";
 }
+function crearComentario(){
+  var parrafoAgregar = document.getElementById("previoTexto").value;
+  if(parrafoAgregar.length > 0){
+    if(encontararParrafo(parrafoAgregar){
+    var parrafo = document.createElement("p");
+    parrafo.innerHTML= parrafoAgregar;
+    document.getElementById("nuevoParrafo").appendChild(parrafo);
+    }
+  }
+  return false;
+}
+function encontararParrafo(contenido){
+  var comentario = document.getElementById("nuevoParrafo").getElementsByTagName("p");
+  for (var i = 0; i < comentario.length; i++){
+    if(comentario[i].innerHTML == contenido)
+    return false;
+  }
+  return true;
+}
