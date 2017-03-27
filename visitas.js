@@ -31,11 +31,11 @@ function alinearDerecha(){
 }
 function crearComentario(){
   var parrafoAgregar = document.getElementById("previoTexto").value;
-  var nParrafo = document.createTextNode(parrafoAgregar);
-  if(nParrafo.length > 0){
-    if(encontrarParrafo(nParrafo)){
+  if(parrafoAgregar.length > 0){
+    if(encontrarParrafo(parrafoAgregar)){
     var parrafo = document.createElement("p");
-    parrafo.innerHTML= nParrafo;
+    var nParrafo = document.createTextNode(parrafoAgregar);
+    parrafo.appendChild(nParrafo);
     document.getElementById("nuevoParrafo").appendChild(parrafo);
     }
   }
